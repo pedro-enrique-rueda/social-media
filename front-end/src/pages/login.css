@@ -1,0 +1,28 @@
+*{
+    
+    font-family: 'Times New Roman', Times, serif;
+}
+.Login{
+    width: 100%;
+    height: 750px;
+}
+
+.LoginForm{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.LoginForm input, button{
+    margin: 10px;
+    width: 400px;
+    height: 40px;
+    font-size: 20px;
+
+}
+
+.LoginForm button:hover{
+    cursor: pointer;
+    background-color:rgb(43, 145, 65);
+}
