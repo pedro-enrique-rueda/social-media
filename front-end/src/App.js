@@ -4,6 +4,7 @@ import Home from './pages/Home';
 import NavBar from './components/NavBar';
 import Register from './pages/Register';
 import Login from './pages/Login';
+import Upload from './pages/Upload';
 
 function App() {
   return (
@@ -14,7 +15,8 @@ function App() {
         <Route path="/" exact render={()=><Home />} />
         <Route path="/register" exact render={()=><Register />} />
         <Route path="/login" exact render={()=><Login />} />
-      </Router>
+        <Route path="/upload" exact render={()=><Upload />} />
+      </Router> 
     </div>
   );
 }
