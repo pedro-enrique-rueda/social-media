@@ -25,12 +25,21 @@ router.post("/login", (req,res)=>{
         }
         if(results.length > 0){
             if(password == results[0].password){
-                res.send('you are logged in');
+                // res.send('you are logged in');
+                // vamos a responder conun json el cual contiene un objeto
+                // con las propiedades loogedIn y username
+                res.json({loggedIn: true, username: username});
             }else{
-                res.send("wrong username/password combo!");
+                res.json({
+                    loggedIn: false, 
+                    message:"Wrong username/password combo!"
+                });
             }
         }else{
-            res.send("User doesn't exist");
+            res.json({
+                loggedIn: false, 
+                message:"Username doesn't exist!"
+            });
         }        
     });
 });
